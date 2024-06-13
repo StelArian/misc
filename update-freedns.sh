@@ -15,3 +15,5 @@ else
     echo "$(date) - IP has not changed. No update needed." >> /var/log/freedns_update.log
 fi
 tail -n 100 "$LOG_FILE" > "$LOG_FILE.tmp" && mv "$LOG_FILE.tmp" "$LOG_FILE"
+
+# 0 * * * * /usr/local/bin/update_freedns.sh
