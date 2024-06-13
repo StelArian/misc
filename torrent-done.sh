@@ -37,3 +37,6 @@ sleep 10m
 
 # Remove the torrent from Transmission using its ID
 transmission-remote -t "$TR_TORRENT_ID" -r >> /tmp/torrent-done.log 2>&1
+
+# 0 3 * * * find /folder -type d -mtime +32 -exec rm -rf {} \;
+# 0 4 * * * find /folder -type f -mtime +32 -delete
